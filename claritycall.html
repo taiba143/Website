@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Call with Taiba Mahmood</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1573133173292370');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1573133173292370&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .swoop {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+        }
+        .swoop svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+        .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+        /* Modal styles */
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-container {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Hero Section -->
+    <header class="relative bg-rose-100 overflow-hidden">
+        <div class="swoop">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,218.7C384,213,480,171,576,144C672,117,768,107,864,122.7C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+        <div class="container mx-auto px-6 py-24 text-center relative z-10">
+            <h2 class="text-sm font-bold uppercase text-rose-500 tracking-widest">For Coaches, Consultants & Service Providers</h2>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mt-4 mb-6 leading-tight">Tired of Sales Calls Ending in "I'll think about it"?</h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">Imagine confidently turning simple conversations into signed clients, without the pressure, rejection, or slimy tactics. Let's make selling feel as good as serving.</p>
+            <button onclick="openModal()" class="bg-rose-500 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book Your Clarity Call Now</button>
+            <p class="text-sm text-gray-600 mt-4">And discover the psychology-backed secrets to effortless sales.</p>
+        </div>
+    </header>
+
+    <!-- Social Proof Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Metric 1: LinkedIn Community -->
+                <div class="bg-rose-50 p-6 rounded-xl shadow-md flex items-center space-x-4">
+                    <div class="bg-rose-200 p-3 rounded-full">
+                        <svg class="w-8 h-8 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-extrabold text-gray-900">11K+</p>
+                        <p class="text-gray-600 font-medium">LinkedIn Community</p>
+                    </div>
+                </div>
+                <!-- Metric 2: Experience -->
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-md flex items-center space-x-4">
+                    <div class="bg-indigo-200 p-3 rounded-full">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-extrabold text-gray-900">4+</p>
+                        <p class="text-gray-600 font-medium">Years Of Experience</p>
+                    </div>
+                </div>
+                <!-- Metric 3: Happy Clients -->
+                <div class="bg-emerald-50 p-6 rounded-xl shadow-md flex items-center space-x-4">
+                    <div class="bg-emerald-200 p-3 rounded-full">
+                        <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-2.714 4.224a2 2 0 00-.23 1.054V18m7-10a2 2 0 00-2-2h-4.732a2 2 0 00-1.732 1.052L7.28 10M7 20H4a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-extrabold text-gray-900">100+</p>
+                        <p class="text-gray-600 font-medium">Happy Clients</p>
+                    </div>
+                </div>
+                <!-- Metric 4: Members -->
+                <div class="bg-amber-50 p-6 rounded-xl shadow-md flex items-center space-x-4">
+                    <div class="bg-amber-200 p-3 rounded-full">
+                        <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21v-1a6 6 0 00-1.781-4.121M12 10.854A4 4 0 009.118 8m3.882 2.854A4 4 0 0114.882 8M18 21a6 6 0 00-9-5.197M18 21v-1a6 6 0 00-6-6H9m12 9H3m12 0h6m-6 0v-1m0 1v-1"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-extrabold text-gray-900">240</p>
+                        <p class="text-gray-600 font-medium">Members</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem / Emotion Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Does This Sound Familiar?</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12">You're passionate about what you do, but when it comes to selling...</p>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="font-bold text-xl mb-3">The Fear of Rejection is Real</h3>
+                    <p class="text-gray-600">You hesitate to follow up, you underprice your services, and the thought of being "salesy" makes you cringe. Low confidence is quietly sabotaging your growth.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="font-bold text-xl mb-3">Justifying Your Prices is Exhausting</h3>
+                    <p class="text-gray-600">You know your worth, but struggle to communicate it. Clients question your fees, and you find yourself offering discounts just to close the deal, feeling undervalued.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="font-bold text-xl mb-3">Objections Feel Like a Dead End</h3>
+                    <p class="text-gray-600">When a potential client says "it's too expensive" or "I need more time," the conversation stalls. You're not sure how to respond without being pushy.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="font-bold text-xl mb-3">Your Conversion Rate is Frustratingly Low</h3>
+                    <p class="text-gray-600">You're getting leads, but they're not turning into clients. You feel like you're spinning your wheels, putting in the effort without seeing the results in your bank account.</p>
+                </div>
+            </div>
+            <button onclick="openModal()" class="mt-12 inline-block bg-rose-500 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book Your Clarity Call Now</button>
+        </div>
+    </section>
+
+    <!-- Solution / Logic Section -->
+    <section class="bg-rose-50 py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Your Path to Confident, Consistent Sales</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12">This isn't just another sales strategy call. It's a mindset shift. We'll use proven, psychology-backed principles to make selling feel natural and effective.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="font-bold text-lg mb-2">Develop a Sales Mindset</h3>
+                    <p class="text-gray-600 text-sm">Shift from "selling" to "serving" and eliminate sales anxiety for good.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="font-bold text-lg mb-2">Understand Buyer Psychology</h3>
+                    <p class="text-gray-600 text-sm">Learn what truly motivates your clients to say "YES!" without hesitation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="font-bold text-lg mb-2">Hit Your Sales Goals Monthly</h3>
+                    <p class="text-gray-600 text-sm">Create a simple, repeatable process to consistently bring in new clients.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="font-bold text-lg mb-2">Unlock Closing Secrets</h3>
+                    <p class="text-gray-600 text-sm">Master the art of the one-on-one sales conversation and close deals with ease.</p>
+                </div>
+            </div>
+             <button onclick="openModal()" class="mt-12 inline-block bg-rose-500 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book Your Clarity Call Now</button>
+        </div>
+    </section>
+
+    <!-- About the Coach Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center max-w-4xl mx-auto">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <img src="https://www.dropbox.com/scl/fi/sa51dfeff09aw067m04wp/Linkedin-Facebook-60.png?rlkey=hdsyg6hwunqjatk1iy3aurjlw&st=8cjrt8g5&raw=1" alt="Taiba Mahmood" class="rounded-full shadow-lg mx-auto w-64 h-64 object-cover">
+                </div>
+                <div class="md:w-2/3 md:pl-12 text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-4">Hi, I'm Taiba Mahmood!</h2>
+                    <p class="text-gray-600 mb-4">For the past 4 years, I've been obsessed with one thing: helping passionate coaches and consultants sell their services without selling their souls. I believe selling is serving, and it should feel natural and fun.</p>
+                    <p class="text-gray-600 mb-4">My mission is to demystify sales by teaching the simple principles of human psychology. With my strategies, you'll overcome limiting beliefs, gain a step-by-step skillset to close calls confidently, and finally get the conversions you deserve.</p>
+                    <p class="font-semibold text-gray-800 mb-6">Ready to make sales simple, easy, and fun? Let's do this together!</p>
+                    <button onclick="openModal()" class="bg-rose-500 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book Your Clarity Call Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What My Clients Are Saying</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <blockquote class="text-lg text-gray-700 italic mb-4">
+                        "I was struggling to justify my prices. Taiba helped me find the confidence to charge what I'm worth and sign clients who respect my value."
+                    </blockquote>
+                    <footer class="font-bold text-gray-900">— Aanandika Sood</footer>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <blockquote class="text-lg text-gray-700 italic mb-4">
+                        "The fear of rejection was holding me back. The mindset shifts I learned were a game-changer for my business and my confidence."
+                    </blockquote>
+                    <footer class="font-bold text-gray-900">— Vidya Chitta</footer>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <blockquote class="text-lg text-gray-700 italic mb-4">
+                        "My conversion rates have gone up by 30% since working with Taiba. Her strategies are simple to implement and they just work."
+                    </blockquote>
+                    <footer class="font-bold text-gray-900">— Khushboo</footer>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <blockquote class="text-lg text-gray-700 italic mb-4">
+                        "I finally know how to handle objections effectively. I see them as opportunities now, not dead ends. Highly recommend this call."
+                    </blockquote>
+                    <footer class="font-bold text-gray-900">— Deepak</footer>
+                </div>
+            </div>
+            <button onclick="openModal()" class="mt-12 inline-block bg-rose-500 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book Your Clarity Call Now</button>
+        </div>
+    </section>
+
+    <!-- FOMO / Booking Section -->
+    <section id="booking" class="bg-rose-600 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Stop Wondering "What If?" and Start Seeing Results.</h2>
+            <p class="text-rose-200 text-lg max-w-3xl mx-auto mb-8">Every day you wait is another day of missed opportunities and potential clients you could be serving. Your next level of business growth is just one conversation away. But I only have a <span class="font-bold underline">limited number of free spots</span> available each month to ensure I can provide maximum value.</p>
+            <div class="bg-white text-gray-800 rounded-xl shadow-2xl p-8 md:p-12 max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold mb-2">Book Your 100% FREE 1-on-1 Clarity Call</h3>
+                <p class="text-gray-600 mb-6">In just 45-60 minutes, you'll walk away with a personalized, step-by-step action plan to boost your sales conversions by 10-20% within 90 days. No fluff, no pressure.</p>
+                <button onclick="openModal()" class="w-full bg-rose-500 text-white font-bold py-4 px-10 rounded-full text-xl hover:bg-rose-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book Your Clarity Call Now</button>
+                <p class="text-sm text-gray-500 mt-4">Spots are filling up fast for this month. Secure yours before they're all gone!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 max-w-3xl text-center">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4 text-left">
+                <div x-data="{ open: false }" class="bg-white rounded-lg shadow-md">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left p-5 font-semibold">
+                        <span>What is the duration of the call?</span>
+                        <span x-text="open ? '-' : '+'" class="text-xl"></span>
+                    </button>
+                    <div x-show="open" x-transition class="p-5 pt-0 text-gray-600">
+                        The clarity call will be between 45-60 minutes. This gives us enough time to dive deep into your specific challenges and craft a clear action plan.
+                    </div>
+                </div>
+                <div x-data="{ open: false }" class="bg-white rounded-lg shadow-md">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left p-5 font-semibold">
+                        <span>Will it be a recorded call?</span>
+                        <span x-text="open ? '-' : '+'" class="text-xl"></span>
+                    </button>
+                    <div x-show="open" x-transition class="p-5 pt-0 text-gray-600">
+                        Yes, with your permission, the call can be recorded. This allows you to revisit our conversation and the strategies we discuss anytime you need a refresher.
+                    </div>
+                </div>
+                <div x-data="{ open: false }" class="bg-white rounded-lg shadow-md">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left p-5 font-semibold">
+                        <span>How will the call be scheduled?</span>
+                        <span x-text="open ? '-' : '+'" class="text-xl"></span>
+                    </button>
+                    <div x-show="open" x-transition class="p-5 pt-0 text-gray-600">
+                        After you join our WhatsApp tribe, a team member will reach out to schedule a call at a time that works best for you. It's a quick and easy process.
+                    </div>
+                </div>
+                 <div x-data="{ open: false }" class="bg-white rounded-lg shadow-md">
+                    <button @click="open = !open" class="w-full flex justify-between items-center text-left p-5 font-semibold">
+                        <span>Is this a high-pressure sales pitch in disguise?</span>
+                        <span x-text="open ? '-' : '+'" class="text-xl"></span>
+                    </button>
+                    <div x-show="open" x-transition class="p-5 pt-0 text-gray-600">
+                        Absolutely not. This is a genuine clarity call designed to provide you with immense value and actionable strategies, whether we decide to work together further or not. My goal is to help you, not pressure you.
+                    </div>
+                </div>
+            </div>
+            <button onclick="openModal()" class="mt-12 inline-block bg-rose-500 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book Your Clarity Call Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Taiba Mahmood. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Making Sales Simple, Easy, and Fun.</p>
+            <p class="text-xs text-gray-500 mt-4">
+                This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is not endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+            </p>
+        </div>
+    </footer>
+    
+    <!-- Modal -->
+    <div id="booking-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden opacity-0" onclick="closeModal()">
+        <div class="modal-container bg-white w-full max-w-md rounded-xl shadow-2xl p-8 transform scale-95" onclick="event.stopPropagation()">
+            <div id="modal-form-content">
+                <h3 class="text-2xl font-bold mb-2 text-center">Get Your FREE Clarity Call</h3>
+                <p class="text-gray-600 mb-6 text-center">Fill in your details to get started.</p>
+                <form id="booking-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="revenue" class="block text-sm font-medium text-gray-700 mb-1">Annual Revenue (INR)</label>
+                        <select id="revenue" name="revenue" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+                            <option value="0-10L">0 - 10L</option>
+                            <option value="10-25L">10L - 25L</option>
+                            <option value="25-50L">25L - 50L</option>
+                            <option value="50L-1Cr">50L - 1Cr</option>
+                            <option value="1Cr+">1Cr+</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-rose-500 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-rose-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Submit</button>
+                </form>
+            </div>
+            <div id="modal-message-content" class="hidden text-center">
+                <!-- Message content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+        const modal = document.getElementById('booking-modal');
+        const modalContainer = modal.querySelector('.modal-container');
+        const formContent = document.getElementById('modal-form-content');
+        const messageContent = document.getElementById('modal-message-content');
+        const form = document.getElementById('booking-form');
+
+        // --- Google Sheet Configuration ---
+        // IMPORTANT: This URL should be replaced with your own Google Apps Script Web App URL
+        const googleSheetScriptURL = 'https://script.google.com/macros/s/AKfycbyBRxcNwjJ1_CXOQg9NsQ_7_hkXDDEm5r-68mAQpgYrDtQFgxxXdCKeXZV1ER6ERtNq/exec';
+        const whatsappLink = 'https://chat.whatsapp.com/InRILmn8HmD7fzAA99x4J1';
+
+        function openModal() {
+            // Reset to form view if it was on message view
+            formContent.classList.remove('hidden');
+            messageContent.classList.add('hidden');
+            form.reset();
+            
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContainer.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeModal() {
+            document.body.classList.remove('overflow-hidden');
+            modal.classList.add('opacity-0');
+            modalContainer.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function showMessage(title, text, isSuccess) {
+            formContent.classList.add('hidden');
+            messageContent.innerHTML = `
+                <h3 class="text-2xl font-bold mb-2">${title}</h3>
+                <p class="text-gray-600 mb-6">${text}</p>
+                ${isSuccess ? `<a href="${whatsappLink}" target="_blank" class="w-full inline-block bg-green-500 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-green-600 transition">Join WhatsApp Tribe</a>` : ''}
+                <button onclick="closeModal()" class="mt-4 w-full bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-300 transition">Close</button>
+            `;
+            messageContent.classList.remove('hidden');
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const revenue = document.getElementById('revenue').value;
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            if (revenue === '0-10L') {
+                // It's an unqualified lead, track it as 'BadLead'
+                if (typeof fbq === 'function') {
+                    fbq('trackCustom', 'BadLead');
+                }
+                showMessage('Sorry!', 'At this time, we are focusing on serving clients with higher revenue. We appreciate your interest and wish you the best!', false);
+            } else {
+                // It's a qualified lead, track it as 'Lead'
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead');
+                }
+
+                if (googleSheetScriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE' || !googleSheetScriptURL.startsWith('https://')) {
+                    console.error("CONFIGURATION ERROR: The Google Apps Script URL has not been set correctly.");
+                    showMessage('Configuration Error', 'The form is not yet connected. Please ensure the Google Apps Script URL has been added to the code.', false);
+                    return; // Stop the submission
+                }
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Submitting...';
+
+                const formData = new FormData(form);
+                
+                fetch(googleSheetScriptURL, { method: 'POST', body: formData})
+                    .then(response => response.json()) // Parse the JSON response from the Apps Script
+                    .then(data => {
+                         if (data.result === 'success') {
+                            showMessage('Success!', 'Thank you for your interest! You are being redirected to our exclusive WhatsApp tribe.', true);
+                            // Redirect after a short delay
+                            setTimeout(() => {
+                                window.open(whatsappLink, '_blank');
+                            }, 1500);
+                         } else {
+                            // Handle errors reported by the Apps Script
+                            throw new Error(data.error || 'Unknown error from Google Sheets.');
+                         }
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        showMessage('Error!', 'There was a problem submitting your information. Please try again.', false);
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Submit';
+                    });
+            }
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -399,14 +399,18 @@
             const submitButton = form.querySelector('button[type="submit"]');
 
             if (revenue === '0-10L') {
-                // It's an unqualified lead, track it as 'BadLead'
+                // This is an unqualified lead.
+                console.log("Meta Pixel Event: Firing 'BadLead' (Custom Event)");
                 if (typeof fbq === 'function') {
+                    // We can track this as a custom event if we want to analyze these submissions
                     fbq('trackCustom', 'BadLead');
                 }
                 showMessage('Sorry!', 'At this time, we are focusing on serving clients with higher revenue. We appreciate your interest and wish you the best!', false);
             } else {
-                // It's a qualified lead, track it as 'Lead'
+                // This is a qualified lead.
+                console.log("Meta Pixel Event: Firing 'Lead' (Standard Event)");
                 if (typeof fbq === 'function') {
+                    // Fire the standard 'Lead' event for qualified submissions.
                     fbq('track', 'Lead');
                 }
 

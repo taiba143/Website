@@ -4,148 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Abundant Coaches Hub</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FFF7F9; /* A very light pink background */
+            scroll-behavior: smooth;
         }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Lora', serif;
+        .blog-card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
         }
-        .text-brand-pink {
-            color: #EC4899; /* pink-500 */
-        }
-        .bg-brand-pink {
-            background-color: #EC4899; /* pink-500 */
-        }
-        .hover\:bg-brand-pink-dark:hover {
-            background-color: #DB2777; /* pink-600 */
-        }
-        .border-brand-pink {
-            border-color: #EC4899; /* pink-500 */
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="bg-gray-50">
 
-    <!-- Navigation Bar -->
-    <nav class="bg-white shadow-sm sticky top-0 z-10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="index.html" class="text-2xl font-bold text-gray-800">Abundant Coaches Hub</a>
-                </div>
-                <!-- Desktop Nav Links & Button -->
-                <div class="hidden md:flex items-center space-x-8">
-                     <a href="#" class="text-gray-600 hover:text-brand-pink text-base font-medium">About Me</a>
-                     <a href="#" class="text-gray-600 hover:text-brand-pink text-base font-medium">Programs</a>
-                     <a href="#" class="text-gray-600 hover:text-brand-pink text-base font-medium">Client Results</a>
-                     <a href="blog.html" class="text-gray-600 hover:text-brand-pink text-base font-medium">Blog</a>
-                     <a href="#" class="bg-brand-pink text-white hover:bg-brand-pink-dark px-5 py-2.5 rounded-lg text-sm font-semibold shadow-md transition-transform transform hover:scale-105">Get in Touch</a>
-                </div>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900"><a href="index.html">Abundant Coaches Hub</a></div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-gray-600 hover:text-rose-500 transition" href="index.html#about">About Me</a>
+                <a class="text-gray-600 hover:text-rose-500 transition" href="index.html#services">Programs</a>
+                <a class="text-gray-600 hover:text-rose-500 transition" href="index.html#testimonials">Client Results</a>
+                <a class="text-gray-600 hover:text-rose-500 transition" href="index.html#socials">Connect on Socials</a>
+                <a class="text-rose-500 font-semibold transition" href="blog.html">Blog</a>
+                <a class="ml-4 px-6 py-2 text-white font-semibold rounded-lg bg-rose-500 hover:bg-rose-600 transition-all duration-300 transform hover:-translate-y-0.5" href="claritycall.html">Get in Touch</a>
             </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a class="block py-2 text-gray-600 hover:text-rose-500" href="index.html#about">About Me</a>
+            <a class="block py-2 text-gray-600 hover:text-rose-500" href="index.html#services">Programs</a>
+            <a class="block py-2 text-gray-600 hover:text-rose-500" href="index.html#testimonials">Client Results</a>
+            <a class="block py-2 text-gray-600 hover:text-rose-500" href="index.html#socials">Connect on Socials</a>
+            <a class="block py-2 text-rose-500 font-semibold" href="blog.html">Blog</a>
+            <a class="block mt-2 px-6 py-2 text-white font-semibold rounded-lg bg-rose-500 hover:bg-rose-600 text-center" href="claritycall.html">Get in Touch</a>
         </div>
-    </nav>
+    </header>
 
     <!-- Main Content -->
-    <div class="py-12 sm:py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Blog Posts Grid -->
-            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-                
-                <!-- Blog Post Tile 1 -->
-                <article class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-                    <div class="flex-shrink-0">
-                        <img class="h-48 w-full object-cover" src="https://placehold.co/600x400/fce7f3/db2777?text=Mindset" alt="Abstract image related to mindset" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fce7f3/db2777?text=Image+Error';">
-                    </div>
-                    <div class="flex flex-1 flex-col justify-between bg-white p-6">
-                        <div class="flex-1">
-                            <p class="text-sm font-medium text-brand-pink">
-                                <a href="i-almost-quit.html" class="hover:underline">Content Strategy</a>
-                            </p>
-                            <a href="i-almost-quit.html" class="mt-2 block">
-                                <h2 class="text-xl font-semibold text-gray-900">I almost quit.</h2>
-                                <p class="mt-3 text-base text-gray-500">My brain felt all mixed up. Posting things online every day is hard! Then, I discovered a simple content secret...</p>
-                            </a>
-                        </div>
-                        <div class="mt-6 flex items-center">
-                            <div class="ml-3">
-                                <p class="text-sm font-medium text-gray-900">Your Name</p>
-                                <div class="flex space-x-1 text-sm text-gray-500">
-                                    <time datetime="2025-08-10">Aug 10, 2025</time>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+    <main class="container mx-auto px-6 py-16">
 
-                <!-- Blog Post Tile 2 -->
-                <article class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-                    <div class="flex-shrink-0">
-                        <img class="h-48 w-full object-cover" src="https://placehold.co/600x400/fce7f3/db2777?text=Growth" alt="Abstract image related to growth" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fce7f3/db2777?text=Image+Error';">
-                    </div>
-                    <div class="flex flex-1 flex-col justify-between bg-white p-6">
-                        <div class="flex-1">
-                            <p class="text-sm font-medium text-brand-pink">
-                                <a href="imposter-syndrome.html" class="hover:underline">Business Growth</a>
-                            </p>
-                            <a href="imposter-syndrome.html" class="mt-2 block">
-                                <h2 class="text-xl font-semibold text-gray-900">5 Ways to Beat Imposter Syndrome</h2>
-                                <p class="mt-3 text-base text-gray-500">Feeling like a fraud? You're not alone. Here are five practical strategies to build confidence and own your expertise.</p>
-                            </a>
-                        </div>
-                        <div class="mt-6 flex items-center">
-                           <div class="ml-3">
-                                <p class="text-sm font-medium text-gray-900">Your Name</p>
-                                <div class="flex space-x-1 text-sm text-gray-500">
-                                    <time datetime="2025-08-05">Aug 5, 2025</time>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Blog Post Tile 3 -->
-                <article class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-                    <div class="flex-shrink-0">
-                        <img class="h-48 w-full object-cover" src="https://placehold.co/600x400/fce7f3/db2777?text=Clients" alt="Abstract image related to clients" onerror="this.onerror=null;this.src='https://placehold.co/600x400/fce7f3/db2777?text=Image+Error';">
-                    </div>
-                    <div class="flex flex-1 flex-col justify-between bg-white p-6">
-                        <div class="flex-1">
-                            <p class="text-sm font-medium text-brand-pink">
-                                <a href="find-your-niche.html" class="hover:underline">Client Attraction</a>
-                            </p>
-                            <a href="find-your-niche.html" class="mt-2 block">
-                                <h2 class="text-xl font-semibold text-gray-900">How to Find Your Niche as a Coach</h2>
-                                <p class="mt-3 text-base text-gray-500">Stop trying to serve everyone. Discover how to find your profitable niche and attract your dream clients with ease.</p>
-                            </a>
-                        </div>
-                        <div class="mt-6 flex items-center">
-                            <div class="ml-3">
-                                <p class="text-sm font-medium text-gray-900">Your Name</p>
-                                <div class="flex space-x-1 text-sm text-gray-500">
-                                    <time datetime="2025-07-28">Jul 28, 2025</time>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
+        <!-- Blog Header & Search -->
+        <section class="text-center mb-16">
+            <h1 class="text-5xl font-extrabold text-gray-900">The Sales Coach's Corner</h1>
+            <p class="mt-4 text-xl text-gray-600">Insights on sales, branding, and growing your coaching business.</p>
+            <div class="mt-8 max-w-lg mx-auto">
+                <div class="relative">
+                    <input type="search" id="blog-search" placeholder="Search for posts..." class="w-full px-6 py-4 rounded-lg border-2 border-gray-300 focus:ring-rose-500 focus:border-rose-500 transition">
+                    <button class="absolute top-0 right-0 mt-3 mr-4 text-gray-500 hover:text-rose-500">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <!-- Latest Posts -->
+        <section id="latest-posts" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Latest Posts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post Card 1 -->
+                <div class="blog-card">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/fecdd3/44403c?text=Sales+Tips" alt="Blog post image">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">August 21, 2025 • Sales Strategy</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">5 Ways to Handle the "I Need to Think About It" Objection</h3>
+                        <p class="text-gray-600 mb-4">Turn hesitation into a closed deal with these proven strategies for handling common sales objections.</p>
+                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Blog Post Card 2 -->
+                <div class="blog-card">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/fbcfe8/44403c?text=Branding" alt="Blog post image">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">August 15, 2025 • Personal Branding</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">How to Build a Personal Brand That Attracts High-Ticket Clients</h3>
+                        <p class="text-gray-600 mb-4">Discover the secrets to creating a magnetic personal brand that has ideal clients reaching out to you.</p>
+                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
+                    </div>
+                </div>
+                 <!-- Blog Post Card 3 -->
+                <div class="blog-card">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/f5d0fe/44403c?text=Mindset" alt="Blog post image">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">August 5, 2025 • Mindset</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">The Confidence Gap: Why Mindset is 80% of Your Sales Success</h3>
+                        <p class="text-gray-600 mb-4">Learn how to cultivate an unshakable belief in yourself and your offer to close more deals with ease.</p>
+                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Posts -->
+        <section id="popular-posts">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Popular Posts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Popular Post Card 1 -->
+                <div class="blog-card">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/ddd6fe/44403c?text=LinkedIn" alt="Blog post image">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">July 28, 2025 • Lead Generation</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Stop Selling, Start Serving: A Guide to LinkedIn Content</h3>
+                        <p class="text-gray-600 mb-4">How to create valuable content on LinkedIn that builds trust and generates inbound leads without being salesy.</p>
+                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Popular Post Card 2 -->
+                <div class="blog-card">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/c7d2fe/44403c?text=Pricing" alt="Blog post image">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">July 19, 2025 • Business</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Are You Charging Enough? How to Price Your Coaching Packages</h3>
+                        <p class="text-gray-600 mb-4">A step-by-step guide to confidently pricing your services to reflect the value you provide.</p>
+                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
+                    </div>
+                </div>
+                 <!-- Popular Post Card 3 -->
+                <div class="blog-card">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/bfdbfe/44403c?text=Discovery+Calls" alt="Blog post image">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">July 10, 2025 • Sales Calls</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">The Anatomy of a Perfect Discovery Call</h3>
+                        <p class="text-gray-600 mb-4">From the first hello to the final close, here's a framework for discovery calls that convert.</p>
+                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white">
-        <div class="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 Abundant Coaches Hub. All Rights Reserved.</p>
+    <footer class="bg-white text-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>© 2025 Abundant Coaches Hub. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Making sales simple, easy & fun!</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+        
+        // Basic search functionality (for demonstration)
+        const searchInput = document.getElementById('blog-search');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        searchInput.addEventListener('keyup', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            blogCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

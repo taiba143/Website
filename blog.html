@@ -22,7 +22,7 @@
             background: white;
             border-radius: 0.5rem;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
             overflow: hidden;
         }
         .blog-card:hover {
@@ -77,80 +77,14 @@
             </div>
         </section>
 
-        <!-- Latest Posts -->
-        <section id="latest-posts" class="mb-16">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">Latest Posts</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Blog Post Card 1 -->
-                <div class="blog-card">
-                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/fecdd3/44403c?text=Sales+Tips" alt="Blog post image">
-                    <div class="p-6">
-                        <p class="text-sm text-gray-500 mb-2">August 21, 2025 • Sales Strategy</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">5 Ways to Handle the "I Need to Think About It" Objection</h3>
-                        <p class="text-gray-600 mb-4">Turn hesitation into a closed deal with these proven strategies for handling common sales objections.</p>
-                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
-                    </div>
-                </div>
-                <!-- Blog Post Card 2 -->
-                <div class="blog-card">
-                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/fbcfe8/44403c?text=Branding" alt="Blog post image">
-                    <div class="p-6">
-                        <p class="text-sm text-gray-500 mb-2">August 15, 2025 • Personal Branding</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">How to Build a Personal Brand That Attracts High-Ticket Clients</h3>
-                        <p class="text-gray-600 mb-4">Discover the secrets to creating a magnetic personal brand that has ideal clients reaching out to you.</p>
-                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
-                    </div>
-                </div>
-                 <!-- Blog Post Card 3 -->
-                <div class="blog-card">
-                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/f5d0fe/44403c?text=Mindset" alt="Blog post image">
-                    <div class="p-6">
-                        <p class="text-sm text-gray-500 mb-2">August 5, 2025 • Mindset</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">The Confidence Gap: Why Mindset is 80% of Your Sales Success</h3>
-                        <p class="text-gray-600 mb-4">Learn how to cultivate an unshakable belief in yourself and your offer to close more deals with ease.</p>
-                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
-                    </div>
-                </div>
+        <!-- All Posts Section (Replaces Latest and Popular for simplicity with fewer posts) -->
+        <section id="all-posts">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">All Posts</h2>
+            <div id="posts-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog posts will be injected here by JavaScript -->
             </div>
         </section>
-
-        <!-- Popular Posts -->
-        <section id="popular-posts">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">Popular Posts</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Popular Post Card 1 -->
-                <div class="blog-card">
-                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/ddd6fe/44403c?text=LinkedIn" alt="Blog post image">
-                    <div class="p-6">
-                        <p class="text-sm text-gray-500 mb-2">July 28, 2025 • Lead Generation</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Stop Selling, Start Serving: A Guide to LinkedIn Content</h3>
-                        <p class="text-gray-600 mb-4">How to create valuable content on LinkedIn that builds trust and generates inbound leads without being salesy.</p>
-                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
-                    </div>
-                </div>
-                <!-- Popular Post Card 2 -->
-                <div class="blog-card">
-                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/c7d2fe/44403c?text=Pricing" alt="Blog post image">
-                    <div class="p-6">
-                        <p class="text-sm text-gray-500 mb-2">July 19, 2025 • Business</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Are You Charging Enough? How to Price Your Coaching Packages</h3>
-                        <p class="text-gray-600 mb-4">A step-by-step guide to confidently pricing your services to reflect the value you provide.</p>
-                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
-                    </div>
-                </div>
-                 <!-- Popular Post Card 3 -->
-                <div class="blog-card">
-                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/bfdbfe/44403c?text=Discovery+Calls" alt="Blog post image">
-                    <div class="p-6">
-                        <p class="text-sm text-gray-500 mb-2">July 10, 2025 • Sales Calls</p>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">The Anatomy of a Perfect Discovery Call</h3>
-                        <p class="text-gray-600 mb-4">From the first hello to the final close, here's a framework for discovery calls that convert.</p>
-                        <a href="#" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
     </main>
 
     <!-- Footer -->
@@ -162,42 +96,97 @@
     </footer>
 
     <script>
-        // JavaScript for mobile menu toggle
+        // --- Mobile Menu Toggle ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        for (let link of mobileMenuLinks) {
-            link.addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
+        // --- Blog Post Data (replaces posts.json) ---
+        const blogPostsData = [
+          {
+            "id": 1,
+            "image": "https://placehold.co/600x400/fecdd3/44403c?text=Sales+Tips",
+            "date": "August 21, 2025",
+            "category": "Sales Strategy",
+            "title": "5 Ways to Handle the 'I Need to Think About It' Objection",
+            "description": "Turn hesitation into a closed deal with these proven strategies for handling common sales objections.",
+            "url": "blogposts/post1.html",
+            "popularity": 95
+          },
+          {
+            "id": 2,
+            "image": "https://placehold.co/600x400/fbcfe8/44403c?text=Branding",
+            "date": "August 15, 2025",
+            "category": "Personal Branding",
+            "title": "How to Build a Personal Brand That Attracts High-Ticket Clients",
+            "description": "Discover the secrets to creating a magnetic personal brand that has ideal clients reaching out to you.",
+            "url": "blogposts/post2.html",
+            "popularity": 92
+          }
+        ];
+
+        // --- Dynamic Blog Post Loading ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const posts = blogPostsData;
+            const postsContainer = document.getElementById('posts-container');
+            
+            // Display all posts initially
+            displayPosts(posts, postsContainer);
+            
+            // Initialize search functionality
+            initializeSearch(posts, postsContainer);
+        });
+
+        function createPostCard(post) {
+            return `
+                <div class="blog-card" data-id="${post.id}">
+                    <img class="w-full h-48 object-cover" src="${post.image}" alt="Blog post image for ${post.title}">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">${post.date} • ${post.category}</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">${post.title}</h3>
+                        <p class="text-gray-600 mb-4">${post.description}</p>
+                        <a href="${post.url}" class="font-semibold text-rose-500 hover:text-rose-600">Read More &rarr;</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function displayPosts(posts, container) {
+            container.innerHTML = ''; // Clear existing posts
+            if (posts.length > 0) {
+                 posts.forEach(post => {
+                    container.innerHTML += createPostCard(post);
+                });
+            } else {
+                container.innerHTML = '<p class="col-span-3 text-center text-gray-500">No posts found.</p>';
+            }
+        }
+        
+        // --- Search Functionality ---
+        function initializeSearch(allPosts, container) {
+            const searchInput = document.getElementById('blog-search');
+            const allPostsSection = document.getElementById('all-posts');
+            const sectionTitle = allPostsSection.querySelector('h2');
+            
+            searchInput.addEventListener('keyup', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+
+                const filteredPosts = allPosts.filter(post => 
+                    post.title.toLowerCase().includes(searchTerm) || 
+                    post.description.toLowerCase().includes(searchTerm)
+                );
+                
+                displayPosts(filteredPosts, container);
+
+                if (searchTerm.length > 0) {
+                    sectionTitle.textContent = `Search Results (${filteredPosts.length})`;
+                } else {
+                    sectionTitle.textContent = 'All Posts';
                 }
             });
         }
-        
-        // Basic search functionality (for demonstration)
-        const searchInput = document.getElementById('blog-search');
-        const blogCards = document.querySelectorAll('.blog-card');
-
-        searchInput.addEventListener('keyup', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-
-            blogCards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                const description = card.querySelector('p').textContent.toLowerCase();
-
-                if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
     </script>
 
 </body>

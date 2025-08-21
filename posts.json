@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "image": "https://placehold.co/600x400/fecdd3/44403c?text=Sales+Tips",
+    "date": "August 21, 2025",
+    "category": "Sales Strategy",
+    "title": "5 Ways to Handle the 'I Need to Think About It' Objection",
+    "description": "Turn hesitation into a closed deal with these proven strategies for handling common sales objections.",
+    "url": "blogposts/post1.html",
+    "popularity": 95
+  },
+  {
+    "id": 2,
+    "image": "https://placehold.co/600x400/fbcfe8/44403c?text=Branding",
+    "date": "August 15, 2025",
+    "category": "Personal Branding",
+    "title": "How to Build a Personal Brand That Attracts High-Ticket Clients",
+    "description": "Discover the secrets to creating a magnetic personal brand that has ideal clients reaching out to you.",
+    "url": "blogposts/post2.html",
+    "popularity": 92
+  }
+]

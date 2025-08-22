@@ -392,9 +392,9 @@
         const messageContent = document.getElementById('modal-message-content');
         const form = document.getElementById('booking-form');
 
-        // --- Google Sheet Configuration ---
+        // --- Configuration ---
         const googleSheetScriptURL = 'https://script.google.com/macros/s/AKfycbyBRxcNwjJ1_CXOQg9NsQ_7_hkXDDEm5r-68mAQpgYrDtQFgxxXdCKeXZV1ER6ERtNq/exec';
-        const whatsappLink = 'https://chat.whatsapp.com/InRILmn8HmD7fzAA99x4J1';
+        const calendlyLink = 'https://calendly.com/taiba143/45-minute-consultation';
 
         function openModal() {
             formContent.classList.remove('hidden');
@@ -420,10 +420,14 @@
 
         function showMessage(title, text, isSuccess) {
             formContent.classList.add('hidden');
+            let successButton = isSuccess 
+                ? `<a href="${calendlyLink}" target="_blank" class="w-full mt-4 inline-block bg-green-500 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-green-600 transition">Click Here to Book Your Slot</a>` 
+                : '';
+            
             messageContent.innerHTML = `
                 <h3 class="text-2xl font-bold mb-2">${title}</h3>
                 <p class="text-gray-600 mb-6">${text}</p>
-                ${isSuccess ? `<a href="${whatsappLink}" target="_blank" class="w-full inline-block bg-green-500 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-green-600 transition">Join WhatsApp Tribe</a>` : ''}
+                ${successButton}
                 <button onclick="closeModal()" class="mt-4 w-full bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-300 transition">Close</button>
             `;
             messageContent.classList.remove('hidden');
@@ -459,10 +463,8 @@
                     .then(response => response.json())
                     .then(data => {
                          if (data.result === 'success') {
-                            showMessage('Success!', 'Thank you for your interest! You are being redirected to our exclusive WhatsApp tribe.', true);
-                            setTimeout(() => {
-                                window.open(whatsappLink, '_blank');
-                            }, 1500);
+                            // THIS IS THE NEW LOGIC
+                            showMessage('Success! Almost there...', 'Your information has been received. Please click the button below to schedule your call.', true);
                          } else {
                             throw new Error(data.error || 'Unknown error from Google Sheets.');
                          }

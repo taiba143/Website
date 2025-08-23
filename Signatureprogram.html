@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Predictable Client Acquisition System | Abundant Coaches Hub</title>
+    <title>Predictable Client Acquisition | Abundant Coaches Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,28 @@
         .hover\:bg-brand-red-dark:hover { background-color: #c02f61; }
         .text-brand-red { color: #D9376E; }
         .border-brand-red { border-color: #D9376E; }
+
+        /* CSS for the wavy section divider */
+        .wavy-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .wavy-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 120px; /* Adjust height of the wave */
+        }
+
+        .wavy-divider .shape-fill {
+            fill: #FBE9EC; /* This must match the background color of the section */
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -29,92 +51,136 @@
         </div>
     </header>
 
-    <!-- AIDA: Attention -->
-    <section class="bg-brand-pink py-20 px-6">
-        <div class="container mx-auto max-w-4xl text-center">
-            <p class="text-lg md:text-xl font-semibold text-brand-red mb-4">ATTENTION COACHES, CONSULTANTS & SERVICE PROVIDERS</p>
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Get 3-5 Leads Daily and Convert Them Into Consistent Clients</h1>
-            <p class="text-xl md:text-2xl text-gray-700 mb-8">A proven, step-by-step system to attract high-value leads with Facebook Ads and sign clients with confidence.</p>
-            <a href="https://calendly.com/taiba143/45-minute-consultation" target="_blank" class="bg-brand-red text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-brand-red-dark transition-colors duration-300 shadow-lg">Book a Free Clarity Call</a>
+    <!-- FRAMEWORK: Hero Section with Wavy Bottom -->
+    <div class="relative">
+        <section class="bg-brand-pink pt-20 pb-32 px-6">
+            <div class="container mx-auto max-w-4xl text-center">
+                <p class="text-lg md:text-xl font-semibold text-brand-red mb-4">FOR COACHES, CONSULTANTS & SERVICE PROVIDERS</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Tired of lead generation systems that don't work?</h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-8">Finally, a simple Facebook Ad strategy to get 3-5 qualified leads on your calendar weekly, and the sales mastery to convert them with confidence.</p>
+                <a href="https://calendly.com/taiba143/45-minute-consultation" target="_blank" class="bg-brand-red text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-brand-red-dark transition-colors duration-300 shadow-lg">Book A Clarity Call Now!</a>
+            </div>
+        </section>
+        <!-- The Wavy Divider SVG -->
+        <div class="wavy-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
         </div>
-    </section>
+    </div>
 
-    <!-- AIDA: Interest -->
+
+    <!-- FRAMEWORK: The AGITATION (PAS) & The BEFORE (BAB) - UPDATED SECTION -->
     <section class="py-20 px-6">
         <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">The End of "Hope" Marketing</h2>
-            <p class="text-lg text-gray-600 leading-relaxed">
-                If you're an expert at what you do, but struggle to find a reliable way to get clients, you're not alone. Posting on social media and sending DMs can feel like a full-time job with little reward.
-            </p>
-            <p class="text-lg text-gray-600 leading-relaxed mt-4">
-                It's time to stop hoping for clients and start building a system that brings them to you. Imagine having a predictable flow of qualified leads every week, and knowing exactly how to turn those conversations into paying clients.
-            </p>
-            <p class="text-xl font-semibold text-gray-800 mt-8">
-                This is what the **Predictable Client Acquisition System** does for you.
-            </p>
-            <div class="mt-12">
-                <a href="https://calendly.com/taiba143/45-minute-consultation" target="_blank" class="bg-brand-red text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-brand-red-dark transition-colors duration-300 shadow-lg">Book a Free Clarity Call</a>
+            <!-- New, more attention-grabbing headline -->
+            <h2 class="text-3xl md:text-4xl font-bold mb-10">Why Your 'Lead Generation' Is Just a Recipe for Burnout</h2>
+            <div class="text-lg text-gray-600 leading-relaxed text-left max-w-2xl mx-auto space-y-6">
+                <!-- (A)GITATE: Listing the 3 most pressing problems -->
+                 <p class="text-center">If you're an expert at your craft but your client flow is unpredictable, you're likely stuck in one of these traps:</p>
+                <div class="space-y-5">
+                    <div class="flex items-start">
+                        <span class="text-brand-red font-bold text-2xl mr-4">1.</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">The Content Treadmill</h3>
+                            <p>You're creating and posting content endlessly, but it only results in vanity metrics (likes, comments) instead of actual sales calls.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-brand-red font-bold text-2xl mr-4">2.</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">The "Wrong-Fit" Lead Problem</h3>
+                            <p>Your calendar gets filled with calls, but they're with people who can't afford your services or aren't ready to buy, wasting your valuable time.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-brand-red font-bold text-2xl mr-4">3.</span>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">The Income Rollercoaster</h3>
+                            <p>You have great months followed by terrifyingly quiet ones. This "feast or famine" cycle makes it impossible to scale or even plan your finances.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- AIDA: Desire -->
+    <!-- FRAMEWORK: The AFTER Picture (BAB) -->
     <section class="bg-gray-50 py-20 px-6">
-        <div class="container mx-auto max-w-4xl">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Now, Imagine a Different Reality...</h2>
+            <div class="text-lg text-gray-600 leading-relaxed text-left max-w-2xl mx-auto space-y-4">
+                <p>Instead of chasing clients, you have a system that brings them to you. A system that allows you to:</p>
+                <ul class="list-none space-y-4">
+                    <li class="flex items-start"><span class="text-brand-red font-bold text-2xl mr-3">✓</span><span>Wake up to a calendar with <strong class="text-gray-800">3-5 qualified leads booked</strong>, ready to talk.</span></li>
+                    <li class="flex items-start"><span class="text-brand-red font-bold text-2xl mr-3">✓</span><span>Enter sales calls with <strong class="text-gray-800">unshakeable confidence</strong>, knowing exactly what to say.</span></li>
+                    <li class="flex items-start"><span class="text-brand-red font-bold text-2xl mr-3">✓</span><span>Finally have a <strong class="text-gray-800">predictable and scalable</strong> way to grow your income, month after month.</span></li>
+                </ul>
+                <p class="font-semibold text-gray-800 text-center pt-4">
+                    This isn't a fantasy. It's what happens when you have the right system.
+                </p>
+                 <div class="text-center pt-8">
+                    <a href="https://calendly.com/taiba143/45-minute-consultation" target="_blank" class="bg-brand-red text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-brand-red-dark transition-colors duration-300 shadow-lg">Book A Clarity Call Now!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRAMEWORK: The SOLUTION / The BRIDGE (PAS & BAB) - UPDATED to 9 steps -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto max-w-5xl">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold">Your Blueprint to Consistent Clients</h2>
-                <p class="text-lg text-gray-600 mt-4">This is a hands-on program. Here’s what you'll learn and implement:</p>
+                <h2 class="text-3xl md:text-4xl font-bold">Introducing: The Predictable Client Acquisition System</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">This is the 9-step <strong class="text-gray-800">bridge</strong> from inconsistent client flow to a scalable business. We give you a complete, done-with-you system to attract and convert high-value clients.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Module Cards Here... -->
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">01</span><h3 class="font-bold text-xl my-2">Craft An Irresistible Offer</h3><p class="text-gray-600">Create offers so good, your ideal clients can't say no.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">02</span><h3 class="font-bold text-xl my-2">Craft Scroll-Stopping Ads</h3><p class="text-gray-600">Write ads that grab attention and get clicks.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">03</span><h3 class="font-bold text-xl my-2">Set Up Your Ad Campaign</h3><p class="text-gray-600">Build your ad campaigns correctly from the start.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">04</span><h3 class="font-bold text-xl my-2">Master Targeting Strategies</h3><p class="text-gray-600">Reach the right people who are ready to buy.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">05</span><h3 class="font-bold text-xl my-2">Fix Any Ad Issues</h3><p class="text-gray-600">Quickly troubleshoot and fix underperforming ads.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">06</span><h3 class="font-bold text-xl my-2">Track & Optimize Ads</h3><p class="text-gray-600">Use data to improve your ads and lower costs.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">07</span><h3 class="font-bold text-xl my-2">Qualify The Right Leads</h3><p class="text-gray-600">Stop wasting time on calls with people who won't buy.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">08</span><h3 class="font-bold text-xl my-2">Master 1:1 Clarity Calls</h3><p class="text-gray-600">Lead sales calls with confidence and handle any objection.</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">09</span><h3 class="font-bold text-xl my-2">Implement Smart Follow-Ups</h3><p class="text-gray-600">Use simple follow-up strategies to close more deals.</p></div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="https://calendly.com/taiba143/45-minute-consultation" target="_blank" class="bg-brand-red text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-brand-red-dark transition-colors duration-300 shadow-lg">Book a Free Clarity Call</a>
+                <!-- 9 Module Cards Here -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">01</span><h3 class="font-bold text-xl my-2">Craft Your High-Ticket Offer</h3><p class="text-gray-600">Structure an irresistible offer that your ideal clients can't say no to.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">02</span><h3 class="font-bold text-xl my-2">Develop Scroll-Stopping Ads</h3><p class="text-gray-600">Learn the psychology behind ads that grab attention and generate high-quality clicks.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">03</span><h3 class="font-bold text-xl my-2">Launch Your Ad Campaign</h3><p class="text-gray-600">We guide you to launch your campaign correctly for immediate, high-quality results.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">04</span><h3 class="font-bold text-xl my-2">Master Laser-Sharp Targeting</h3><p class="text-gray-600">Find and target the people who are actively looking for your solution right now.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">05</span><h3 class="font-bold text-xl my-2">Troubleshoot & Scale</h3><p class="text-gray-600">Learn to diagnose underperforming ads and scale the winners without guesswork.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">06</span><h3 class="font-bold text-xl my-2">Data-Driven Optimization</h3><p class="text-gray-600">Use simple metrics to improve your ads, lower costs, and increase lead quality.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">07</span><h3 class="font-bold text-xl my-2">Lead Qualification Protocol</h3><p class="text-gray-600">Implement a system to filter out tire-kickers and only speak to prospects ready to buy.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">08</span><h3 class="font-bold text-xl my-2">Master The Clarity Call</h3><p class="text-gray-600">Lead powerful sales calls that feel authentic and enroll clients with ease.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-red"><span class="text-brand-red font-bold">09</span><h3 class="font-bold text-xl my-2">The Follow-Up System</h3><p class="text-gray-600">Close an extra 20-30% of deals with a simple, non-pushy follow-up sequence.</p></div>
             </div>
         </div>
     </section>
 
     <!-- Bonuses Section -->
-    <section class="py-20 px-6">
+    <section class="bg-brand-pink py-20 px-6">
         <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Get These Bonuses to Accelerate Your Results</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Plus, Get These "Unfair Advantage" Bonuses</h2>
+            <p class="text-lg text-gray-600 mb-10">Tools and templates to accelerate your results.</p>
             <div class="mt-10 space-y-8 md:space-y-0 md:flex md:space-x-8 text-left">
-                <div class="flex-1 bg-brand-pink p-6 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2">Bonus #1: AI Ad Builder Toolkit</h3>
-                    <p class="text-gray-700">Use AI tools to write amazing ad copy in minutes.</p>
+                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2 text-brand-red">Bonus #1: AI Ad Copy Toolkit</h3>
+                    <p class="text-gray-700">Our custom prompts to write high-converting ad copy in a fraction of the time.</p>
                 </div>
-                <div class="flex-1 bg-brand-pink p-6 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2">Bonus #2: High-Conversion Scripts</h3>
-                    <p class="text-gray-700">Get my proven, word-for-word templates for DMs and follow-ups.</p>
+                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2 text-brand-red">Bonus #2: Sales Mastery Scripts</h3>
+                    <p class="text-gray-700">Proven, word-for-word templates for sales calls and follow-ups that close deals.</p>
                 </div>
-                <div class="flex-1 bg-brand-pink p-6 rounded-lg">
-                    <h3 class="font-bold text-xl mb-2">Bonus #3: FB Ad FAQ Vault</h3>
-                    <p class="text-gray-700">Learn how to avoid ad bans and deal with spam, stress-free.</p>
+                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2 text-brand-red">Bonus #3: FB Ad Troubleshooting Vault</h3>
+                    <p class="text-gray-700">Our guide to quickly fixing common ad issues and avoiding account shutdowns.</p>
                 </div>
             </div>
-            <div class="text-center mt-12">
-                <a href="https://calendly.com/taiba143/45-minute-consultation" target="_blank" class="bg-brand-red text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-brand-red-dark transition-colors duration-300 shadow-lg">Book a Free Clarity Call</a>
+             <div class="text-center mt-12">
+                <a href="https://calendly.com/taiba143/45-minute-consultation" target="_blank" class="bg-brand-red text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-brand-red-dark transition-colors duration-300 shadow-lg">Book A Clarity Call Now!</a>
             </div>
         </div>
     </section>
 
-    <!-- AIDA: Action -->
-    <section id="cta" class="bg-brand-pink py-20 px-6">
+    <!-- FRAMEWORK: Final Call to ACTION -->
+    <section id="cta" class="py-20 px-6">
         <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Build Your Predictable Client System?</h2>
-            <p class="text-lg text-gray-700 mb-8">Stop guessing and install a proven system for attracting high-value clients every week. Let's talk.</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Trade Unpredictability for a Flood of Clients?</h2>
+            <p class="text-lg text-gray-700 mb-8">Stop the guesswork. Let's have a quick chat to map out your custom client acquisition plan. No pressure, just clarity.</p>
             <a href="https://calendly.com/taiba143/45-minute-consultation" target="_blank" class="bg-brand-red text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-brand-red-dark transition-colors duration-300 shadow-lg">
-                Click Here to Book Your Free Strategy Call
+                Book A Clarity Call Now!
             </a>
         </div>
     </section>

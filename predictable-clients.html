@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,9 @@
     <!-- SEO: Added a descriptive title and meta description -->
     <title>Predictable Client Acquisition | Taiba Mahmood</title>
     <meta name="description" content="Get 3-5 high-quality leads daily with a predictable Facebook Ad strategy for coaches, consultants, and service providers. Book a free clarity call today.">
+
+    <!-- REFINEMENT: Added a Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌹</text></svg>">
 
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -54,17 +57,28 @@
         .modal-container {
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
-        /* Custom radio button styles */
-        .custom-radio:checked {
-            background-color: #e11d48; /* rose-600 */
-            border-color: #e11d48; /* rose-600 */
-        }
-        .custom-radio:checked + label {
-            color: #111827; /* gray-900 */
+        /* Custom dropdown/radio styles */
+        .custom-select:focus, .custom-input:focus {
+             border-color: #e11d48;
+             box-shadow: 0 0 0 2px rgba(225, 29, 72, 0.2);
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
+
+    <!-- REFINEMENT: Sticky Header/CTA -->
+    <nav id="sticky-nav" class="fixed top-0 w-full bg-white/80 backdrop-blur-sm shadow-md z-40 transition-transform duration-300 ease-in-out -translate-y-full">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-bold text-xl text-gray-900">Taiba Mahmood</span>
+                </div>
+                <div class="flex items-center">
+                    <button onclick="openModal()" class="focusable bg-rose-600 text-white font-bold py-2 px-6 rounded-full text-sm hover:bg-rose-700 transition duration-300 ease-in-out transform hover:scale-105">Book A Clarity Call Now!</button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <main id="main-content">
         <!-- Header / Hero Section -->
@@ -74,17 +88,29 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,218.7C384,213,480,171,576,144C672,117,768,107,864,122.7C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
             </div>
             <div class="container mx-auto px-4 sm:px-6 py-20 sm:py-24 text-center relative z-10">
-                <!-- ACCESSIBILITY: Darkened text color for better contrast -->
                 <h2 class="text-sm font-bold uppercase text-rose-600 tracking-widest">For Coaches, Consultants & Service Providers</h2>
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mt-4 mb-6 leading-tight">Want 3-5 High-Quality Leads, Every Single Day?</h1>
                 <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">Stop guessing and start getting consistent clients with a simple, predictable Facebook Ad strategy designed to fill your calendar and grow your business on autopilot.</p>
-                <!-- ACCESSIBILITY: Darkened button color for better contrast -->
                 <button onclick="openModal()" class="focusable bg-rose-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book A Clarity Call Now!</button>
-                <p class="text-sm text-gray-700 mt-4">Book a FREE strategy call to get your custom client acquisition plan.</p>
+                
+                <div class="mt-8 max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-6 h-6 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-gray-700">Pinpoint your #1 growth bottleneck</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                         <svg class="w-6 h-6 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-gray-700">Get a step-by-step attraction plan</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                         <svg class="w-6 h-6 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-gray-700">100% Value, 0% Pressure</span>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <!-- Social Proof Section -->
+        <!-- Original Social Proof Section -->
         <section class="bg-white py-16">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
@@ -172,6 +198,27 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">The Predictable Client Acquisition System</h2>
                     <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">I'll personally help you build a complete, end-to-end system to attract, nurture, and close your ideal clients consistently. Here's what's inside:</p>
                 </div>
+
+                <!-- MEDIUM-IMPACT: Visualize The System -->
+                <div class="max-w-2xl mx-auto mb-16">
+                    <div class="flex items-center justify-center space-x-2 sm:space-x-4">
+                        <div class="text-center p-4 bg-white rounded-lg shadow-md flex-1">
+                            <div class="text-rose-600 font-bold">Step 1</div>
+                            <div class="text-gray-800">High-Quality Ads</div>
+                        </div>
+                        <svg class="w-8 h-8 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-md flex-1">
+                            <div class="text-rose-600 font-bold">Step 2</div>
+                            <div class="text-gray-800">Automated Funnel</div>
+                        </div>
+                        <svg class="w-8 h-8 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        <div class="text-center p-4 bg-emerald-500 text-white rounded-lg shadow-lg flex-1">
+                            <div class="font-bold">Result</div>
+                            <div class="">Booked Clients</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <!-- Steps 1-9 -->
                     <div class="bg-white p-6 rounded-xl shadow-lg flex items-start space-x-4"><div class="flex-shrink-0 bg-rose-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">01</div><div><h3 class="text-xl font-bold mb-2">Craft An Irresistible Offer</h3><p class="text-gray-700">Create offers so good, your ideal clients can't say no.</p></div></div>
@@ -187,6 +234,129 @@
                  <div class="text-center mt-12">
                     <button onclick="openModal()" class="focusable inline-block bg-rose-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book A Clarity Call Now!</button>
                  </div>
+            </div>
+        </section>
+
+        <!-- New Section: This Call Is For You If -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">This FREE Call Is For You If...</h2>
+                    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12">You are a perfect fit for this no-cost strategy session if you see yourself in the descriptions below.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Item 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <div class="bg-rose-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">You're a Coach, Consultant, or Service Provider</h3>
+                        <p class="text-gray-700">You have a proven service but need a reliable system to attract clients.</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <div class="bg-rose-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">You're Ready for Consistent High-Quality Leads</h3>
+                        <p class="text-gray-700">You want to stop the "feast or famine" cycle and build a predictable pipeline.</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                         <div class="bg-rose-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">You're Determined to Master Ethical Sales</h3>
+                        <p class="text-gray-700">You want to convert leads with confidence, without feeling salesy.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <button onclick="openModal()" class="focusable inline-block bg-rose-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book A Clarity Call Now!</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: What You'll Get -->
+        <section class="py-20 bg-rose-50">
+            <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">In Just 45 Minutes, You Will Receive:</h2>
+                    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12">This is a pure value, no-pressure strategy session designed to give you immediate clarity and an actionable plan.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                         <div class="bg-rose-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Root Cause Diagnosis</h3>
+                        <p class="text-gray-700">We'll find the exact bottleneck that's holding you back from consistent clients.</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                         <div class="bg-rose-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Blind Spot Analysis</h3>
+                        <p class="text-gray-700">Uncover the hidden mistakes in your lead generation & sales costing you revenue.</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                         <div class="bg-rose-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 16.382V5.618a1 1 0 00-1.447-.894L15 7m-6 13v- hükümet"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">A Custom Action Plan</h3>
+                        <p class="text-gray-700">Your step-by-step roadmap to consistent leads and sales, tailored to your business.</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-12">
+                    <button onclick="openModal()" class="focusable inline-block bg-rose-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book A Clarity Call Now!</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Exclusive Bonuses -->
+        <section class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
+                 <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Plus, Get 3 FREE Bonuses Just For Attending</h2>
+                    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12">To thank you for your time, you'll receive these valuable resources (<span class="font-bold">worth $497</span>) to accelerate your results.</p>
+                </div>
+                <div class="space-y-6">
+                    <!-- Bonus 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 flex items-center space-x-6">
+                        <div class="flex-shrink-0 bg-rose-100 text-rose-600 w-16 h-16 rounded-lg flex items-center justify-center">
+                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">High-Ticket Sales Script</h3>
+                            <p class="text-gray-700">The proven, word-for-word script to close premium clients with confidence and ease.</p>
+                        </div>
+                    </div>
+                     <!-- Bonus 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 flex items-center space-x-6">
+                        <div class="flex-shrink-0 bg-rose-100 text-rose-600 w-16 h-16 rounded-lg flex items-center justify-center">
+                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Pre-Qualifying Questionnaire</h3>
+                            <p class="text-gray-700">Ensure you only speak with motivated, ready-to-buy prospects, saving you hours.</p>
+                        </div>
+                    </div>
+                     <!-- Bonus 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 flex items-center space-x-6">
+                        <div class="flex-shrink-0 bg-rose-100 text-rose-600 w-16 h-16 rounded-lg flex items-center justify-center">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">High-Energy Pre-Call Routine</h3>
+                            <p class="text-gray-700">The simple 5-minute routine to boost your focus and confidence before any deal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <button onclick="openModal()" class="focusable inline-block bg-rose-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book A Clarity Call Now!</button>
+                </div>
             </div>
         </section>
 
@@ -213,33 +383,60 @@
             <div class="container mx-auto px-4 sm:px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What My Clients Are Saying</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    <!-- Testimonials 1-9 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-left"><blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"I was struggling to justify my prices. Taiba helped me find the confidence to charge what I'm worth and sign clients who respect my value."</blockquote><footer class="font-bold text-gray-900">— Aanandika Sood, Personal Branding Consultant</footer></div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-left"><blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"The fear of rejection was holding me back. The mindset shifts I learned were a game-changer for my business and my confidence."</blockquote><footer class="font-bold text-gray-900">— Vidya Chitta, Life Coach</footer></div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-left"><blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"I thought Facebook Ads were too complicated. Taiba's system is so simple. I got my first 3 qualified leads within 48 hours of launching."</blockquote><footer class="font-bold text-gray-900">— Rohan Sharma, Business Consultant</footer></div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-left"><blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"My biggest problem was low-quality leads. Now, the people I talk to are already pre-sold and ready to invest. It has saved me so much time."</blockquote><footer class="font-bold text-gray-900">— Priya Desai, Nutrition Coach</footer></div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-left"><blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"My conversion rates have gone up by 30% since working with Taiba. Her strategies are simple to implement and they just work."</blockquote><footer class="font-bold text-gray-900">— Khushboo Khushnay, Relationship Coach</footer></div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-left"><blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"I finally know how to handle objections effectively. I see them as opportunities now, not dead ends. Highly recommend this call."</blockquote><footer class="font-bold text-gray-900">— Deepak, Anxiety Relief Coach</footer></div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-left"><blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"My team and I have truly mastered 1:1 sales, thanks to Taiba. Our closing rate has doubled."</blockquote><footer class="font-bold text-gray-900">— Tuba, Blockchain Consultant</footer></div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-left"><blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"I struggled with selling my high-ticket program. Taiba's framework for clarity calls gave me the structure I needed. I closed two new clients in my first week!"</blockquote><footer class="font-bold text-gray-900">— Arjun Singh, Public Speaking Coach</footer></div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-left"><blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"My ad costs were getting out of control. Taiba showed me how to target the right audience, and now my cost per lead has been cut in half."</blockquote><footer class="font-bold text-gray-900">— Sunita Patil, Law of Attraction Coach</footer></div>
+                    <!-- Testimonials with Photos -->
+                    <!-- IMPORTANT: Replace "YOUR_CLOUD_NAME/image/upload/v1/..." with your actual Cloudinary URLs -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-center">
+                        <img src="https://res.cloudinary.com/dagbeybez/image/upload/v1756646696/Aanandika_n9zd0q.png" alt="Aanandika Sood" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-rose-100 object-cover" loading="lazy">
+                        <blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"I was struggling to justify my prices. Taiba helped me find the confidence to charge what I'm worth and sign clients who respect my value."</blockquote><footer class="font-bold text-gray-900">— Aanandika Sood, Personal Branding Consultant</footer>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-center">
+                        <img src="https://res.cloudinary.com/dagbeybez/image/upload/v1756646738/Vidhya_pmmcfg.png" alt="Vidya Chitta" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-rose-100 object-cover" loading="lazy">
+                        <blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"The fear of rejection was holding me back. The mindset shifts I learned were a game-changer for my business and my confidence."</blockquote><footer class="font-bold text-gray-900">— Vidya Chitta, Life Coach</footer>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-center">
+                        <img src="https://res.cloudinary.com/dagbeybez/image/upload/v1756646788/Rohan_ko0fyt.png" alt="Rohan Sharma" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-rose-100 object-cover" loading="lazy">
+                        <blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"I thought Facebook Ads were too complicated. Taiba's system is so simple. I got my first 3 qualified leads within 48 hours of launching."</blockquote><footer class="font-bold text-gray-900">— Rohan Sharma, Business Consultant</footer>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-center">
+                        <img src="https://res.cloudinary.com/dagbeybez/image/upload/v1756646884/Priya_sj3h3m.png" alt="Priya Desai" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-rose-100 object-cover" loading="lazy">
+                        <blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"My biggest problem was low-quality leads. Now, the people I talk to are already pre-sold and ready to invest. It has saved me so much time."</blockquote><footer class="font-bold text-gray-900">— Priya Desai, Nutrition Coach</footer>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-center">
+                        <img src="https://res.cloudinary.com/dagbeybez/image/upload/v1756646942/Khushboo_tx88ib.png" alt="Khushboo Khushnay" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-rose-100 object-cover" loading="lazy">
+                        <blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"My conversion rates have gone up by 30% since working with Taiba. Her strategies are simple to implement and they just work."</blockquote><footer class="font-bold text-gray-900">— Khushboo Khushnay, Relationship Coach</footer>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-center">
+                         <img src="https://res.cloudinary.com/dagbeybez/image/upload/v1756646985/Deepak_tim2nu.png" alt="Deepak" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-rose-100 object-cover" loading="lazy">
+                        <blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"I finally know how to handle objections effectively. I see them as opportunities now, not dead ends. Highly recommend this call."</blockquote><footer class="font-bold text-gray-900">— Deepak, Anxiety Relief Coach</footer>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-center">
+                        <img src="https://res.cloudinary.com/dagbeybez/image/upload/v1756647026/Tuba_a0rf0i.png" alt="Tuba" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-rose-100 object-cover" loading="lazy">
+                        <blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"My team and I have truly mastered 1:1 sales, thanks to Taiba. Our closing rate has doubled."</blockquote><footer class="font-bold text-gray-900">— Tuba, Blockchain Consultant</footer>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-center">
+                        <img src="https://placehold.co/128x128/BFDBFE/1E3A8A?text=Arjun+S." alt="Arjun Singh" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-rose-100 object-cover" loading="lazy">
+                        <blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"I struggled with selling my high-ticket program. Taiba's framework for clarity calls gave me the structure I needed. I closed two new clients in my first week!"</blockquote><footer class="font-bold text-gray-900">— Arjun Singh, Public Speaking Coach</footer>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col text-center">
+                        <img src="https://res.cloudinary.com/dagbeybez/image/upload/v1756647799/Sunita_b0gsce.png" alt="Sunita Patil" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-rose-100 object-cover" loading="lazy">
+                        <blockquote class="text-lg text-gray-700 italic mb-4 flex-grow">"My ad costs were getting out of control. Taiba showed me how to target the right audience, and now my cost per lead has been cut in half."</blockquote><footer class="font-bold text-gray-900">— Sunita Patil, Law of Attraction Coach</footer>
+                    </div>
                 </div>
                 <button onclick="openModal()" class="focusable mt-12 inline-block bg-rose-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-rose-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book A Clarity Call Now!</button>
             </div>
         </section>
 
         <!-- FOMO / Booking Section -->
-        <!-- ACCESSIBILITY: Darkened background for better text contrast -->
         <section id="booking" class="bg-rose-700 text-white py-20">
             <div class="container mx-auto px-4 sm:px-6 text-center">
                 <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Stop Guessing. Start Growing.</h2>
-                <!-- ACCESSIBILITY: Lightened text for better contrast -->
                 <p class="text-rose-200 text-lg max-w-3xl mx-auto mb-8">Every day you wait is another day of missed revenue and clients you could be helping. Your predictable client acquisition system is just one call away.</p>
                 <div class="bg-white text-gray-800 rounded-xl shadow-2xl p-8 md:p-12 max-w-2xl mx-auto">
                     <h3 class="text-2xl font-bold mb-2">Book Your FREE 1-on-1 Client Acquisition Strategy Call</h3>
                     <p class="text-gray-700 mb-6">In this 45 minute call, we will build a custom action plan to get you 3-5+ new leads every single day. This is a pure value, no-pressure strategy session.</p>
                     <div class="bg-rose-100 border-l-4 border-rose-500 text-rose-800 p-4 rounded-lg mb-6">
                         <p class="font-bold">Spots are filling up fast for this month!</p>
+                        <!-- REFINEMENT: Dynamic Spot Counter -->
                         <p>Only <span id="spots-left" class="text-xl font-extrabold">10</span> free strategy calls remaining.</p>
                     </div>
                     <button onclick="openModal()" class="focusable w-full bg-rose-600 text-white font-bold py-4 px-10 rounded-full text-xl hover:bg-rose-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Book A Clarity Call Now!</button>
@@ -304,7 +501,6 @@
             <div class="container mx-auto px-4 sm:px-6 text-center">
                 <p>&copy; 2025 Taiba Mahmood. All Rights Reserved.</p>
                 <p class="text-sm text-gray-400 mt-2">Building Predictable Client Acquisition Systems.</p>
-                <!-- ACCESSIBILITY: Lightened text for better contrast -->
                 <p class="text-xs text-gray-400 mt-4">
                     This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is not endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
                 </p>
@@ -323,36 +519,37 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name*</label>
-                            <input type="text" id="name" name="name" required autocomplete="name" class="focusable w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600">
+                            <input type="text" id="name" name="name" required autocomplete="name" class="focusable custom-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
-                            <input type="email" id="email" name="email" required autocomplete="email" class="focusable w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600">
+                            <input type="email" id="email" name="email" required autocomplete="email" class="focusable custom-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600">
                         </div>
                     </div>
                     <div class="mt-4">
                         <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number*</label>
-                        <input type="tel" id="phone" name="phone" required autocomplete="tel" class="focusable w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600">
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel" class="focusable custom-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600">
                     </div>
                 </div>
                 
                 <!-- Question 1: Describe Yourself -->
-                <fieldset>
-                    <legend class="block text-sm font-medium text-gray-700 mb-2">How do you best describe yourself?*</legend>
-                    <div class="space-y-2">
-                        <div class="flex items-center"><input type="radio" id="role-coach" name="role" value="Coach" required class="focusable custom-radio h-4 w-4 text-rose-600 border-gray-300 focus:ring-rose-600"><label for="role-coach" class="ml-3 block text-sm text-gray-700">Coach</label></div>
-                        <div class="flex items-center"><input type="radio" id="role-consultant" name="role" value="Consultant" class="focusable custom-radio h-4 w-4 text-rose-600 border-gray-300 focus:ring-rose-600"><label for="role-consultant" class="ml-3 block text-sm text-gray-700">Consultant</label></div>
-                        <div class="flex items-center"><input type="radio" id="role-service-provider" name="role" value="Service Provider" class="focusable custom-radio h-4 w-4 text-rose-600 border-gray-300 focus:ring-rose-600"><label for="role-service-provider" class="ml-3 block text-sm text-gray-700">Service Provider</label></div>
-                        <div class="flex items-center"><input type="radio" id="role-agency-owner" name="role" value="Agency Owner" class="focusable custom-radio h-4 w-4 text-rose-600 border-gray-300 focus:ring-rose-600"><label for="role-agency-owner" class="ml-3 block text-sm text-gray-700">Agency Owner</label></div>
-                        <div class="flex items-center"><input type="radio" id="role-other" name="role" value="Other" class="focusable custom-radio h-4 w-4 text-rose-600 border-gray-300 focus:ring-rose-600"><label for="role-other" class="ml-3 block text-sm text-gray-700">Something else</label></div>
-                        <input type="text" id="role-other-specify" name="role_other_specify" placeholder="Please specify" class="focusable mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600 hidden">
-                    </div>
-                </fieldset>
+                 <div>
+                    <label for="role" class="block text-sm font-medium text-gray-700 mb-1">How do you best describe yourself?*</label>
+                    <select id="role" name="role" required class="focusable custom-select w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600 bg-white">
+                        <option value="" disabled selected>Please select an option</option>
+                        <option value="Coach">Coach</option>
+                        <option value="Consultant">Consultant</option>
+                        <option value="Service Provider">Service Provider</option>
+                        <option value="Agency Owner">Agency Owner</option>
+                        <option value="Other">Something else</option>
+                    </select>
+                    <input type="text" id="role-other-specify" name="role_other_specify" placeholder="Please specify" class="focusable custom-input mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600 hidden">
+                </div>
 
                 <!-- Question 2: Monthly Revenue -->
                 <div>
                     <label for="monthly_revenue" class="block text-sm font-medium text-gray-700 mb-1">What is your current approximate monthly revenue? (in INR)*</label>
-                    <select id="monthly_revenue" name="monthly_revenue" required class="focusable w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600">
+                    <select id="monthly_revenue" name="monthly_revenue" required class="focusable custom-select w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600 bg-white">
                         <option value="" disabled selected>Please select an option</option>
                         <option value="lt25k">Less than ₹25k</option>
                         <option value="25k-50k">₹25k - ₹50k</option>
@@ -362,20 +559,33 @@
                 </div>
 
                 <!-- Question 3: Biggest Challenge -->
-                <fieldset>
-                    <legend class="block text-sm font-medium text-gray-700 mb-2">What is your single biggest business challenge right now?*</legend>
-                    <div class="space-y-2">
-                         <div class="flex items-center"><input type="radio" id="challenge-leads" name="challenge" value="Not getting enough leads" required class="focusable custom-radio h-4 w-4 text-rose-600 border-gray-300 focus:ring-rose-600"><label for="challenge-leads" class="ml-3 block text-sm text-gray-700">Not Getting enough leads (Lead Generation)</label></div>
-                         <div class="flex items-center"><input type="radio" id="challenge-sales" name="challenge" value="Converting leads into paying clients" class="focusable custom-radio h-4 w-4 text-rose-600 border-gray-300 focus:ring-rose-600"><label for="challenge-sales" class="ml-3 block text-sm text-gray-700">Converting leads into paying clients (Sales)</label></div>
-                         <div class="flex items-center"><input type="radio" id="challenge-both" name="challenge" value="Both generating leads and converting them" class="focusable custom-radio h-4 w-4 text-rose-600 border-gray-300 focus:ring-rose-600"><label for="challenge-both" class="ml-3 block text-sm text-gray-700">Both generating leads and converting them</label></div>
-                         <div class="flex items-center"><input type="radio" id="challenge-quality" name="challenge" value="Poor Quality Leads" class="focusable custom-radio h-4 w-4 text-rose-600 border-gray-300 focus:ring-rose-600"><label for="challenge-quality" class="ml-3 block text-sm text-gray-700">Poor Quality Leads</label></div>
-                    </div>
-                </fieldset>
-
+                <div>
+                    <label for="challenge" class="block text-sm font-medium text-gray-700 mb-1">What is your single biggest business challenge right now?*</label>
+                    <select id="challenge" name="challenge" required class="focusable custom-select w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600 bg-white">
+                        <option value="" disabled selected>Please select an option</option>
+                        <option value="Not getting enough leads">Not Getting enough leads (Lead Generation)</option>
+                        <option value="Converting leads into paying clients">Converting leads into paying clients (Sales)</option>
+                        <option value="Both generating leads and converting them">Both generating leads and converting them</option>
+                        <option value="Poor Quality Leads">Poor Quality Leads</option>
+                    </select>
+                </div>
+                 
                 <!-- Question 4: Commitment -->
                 <div>
-                    <label for="commitment" class="block text-sm font-medium text-gray-700 mb-1">On a scale of 1-10, how committed are you to solving this challenge in the next 3 months?*</label>
-                    <input type="number" id="commitment" name="commitment" min="1" max="10" required class="focusable w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600" placeholder="e.g., 8">
+                    <label for="commitment" class="block text-sm font-medium text-gray-700 mb-1">On a scale of 1-10, how committed are you to solving this challenge?*</label>
+                     <select id="commitment" name="commitment" required class="focusable custom-select w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-rose-600 focus:border-rose-600 bg-white">
+                        <option value="" disabled selected>Please select (10 = Very Committed)</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
                 </div>
 
                 <button type="submit" class="focusable w-full bg-rose-600 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-rose-700 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Submit Application</button>
@@ -412,11 +622,43 @@
             const mainContent = document.getElementById('main-content');
             const successPage = document.getElementById('success-page');
             const sorryPage = document.getElementById('sorry-page');
-            const roleOtherRadio = document.getElementById('role-other');
+            const roleSelect = document.getElementById('role');
             const roleOtherSpecify = document.getElementById('role-other-specify');
+            const stickyNav = document.getElementById('sticky-nav');
+            const heroSection = document.querySelector('header');
 
             const googleSheetScriptURL = 'https://script.google.com/macros/s/AKfycbz8O1ckC8VreTyAZpwXwwfiDuE6fjQfP5JQ-sfHywLCuxmHSjrqzKw4ZM_YALQL_ncDtA/exec';
             
+            // --- Scripts for optimizations ---
+
+            // Sticky nav logic
+            const observer = new IntersectionObserver(
+                ([e]) => {
+                    if (!e.isIntersecting) {
+                        stickyNav.classList.remove('-translate-y-full');
+                    } else {
+                        stickyNav.classList.add('-translate-y-full');
+                    }
+                },
+                { threshold: [0] }
+            );
+            observer.observe(heroSection);
+            
+            // Dynamic spots counter logic
+            const spotsSpan = document.getElementById('spots-left');
+            const today = new Date().toISOString().slice(0, 10); // Get 'YYYY-MM-DD'
+            const spotsData = JSON.parse(localStorage.getItem('spotsData'));
+
+            if (spotsData && spotsData.date === today && spotsData.spots > 3) {
+                spotsSpan.textContent = spotsData.spots;
+            } else {
+                // Set a new random number for today between 5 and 10
+                const newSpots = Math.floor(Math.random() * 6) + 5; 
+                localStorage.setItem('spotsData', JSON.stringify({ date: today, spots: newSpots }));
+                spotsSpan.textContent = newSpots;
+            }
+
+            // --- Lazy load external tracking scripts ---
             let scriptsLoaded = false;
             const loadExternalScripts = () => {
                 if (scriptsLoaded) return;
@@ -447,7 +689,8 @@
             };
             
             ['scroll', 'mousemove', 'touchstart', 'click'].forEach(event => window.addEventListener(event, loadExternalScripts, { once: true, passive: true }));
-
+            
+            // --- Modal and Form Logic ---
             let lastFocusedElement;
             window.openModal = function() {
                 lastFocusedElement = document.activeElement;
@@ -472,11 +715,10 @@
                 }, 300);
             }
 
-            form.elements.role.forEach(radio => {
-                radio.addEventListener('change', () => {
-                    roleOtherSpecify.classList.toggle('hidden', !roleOtherRadio.checked);
-                    roleOtherSpecify.required = roleOtherRadio.checked;
-                });
+            roleSelect.addEventListener('change', () => {
+                const isOther = roleSelect.value === 'Other';
+                roleOtherSpecify.classList.toggle('hidden', !isOther);
+                roleOtherSpecify.required = isOther;
             });
 
             form.addEventListener('submit', function(e) {
@@ -489,6 +731,7 @@
                 if (monthlyRevenue === 'lt25k') {
                     if (typeof fbq === 'function') fbq('trackCustom', 'BadLead');
                     mainContent.style.display = 'none';
+                    stickyNav.style.display = 'none';
                     sorryPage.classList.remove('hidden');
                 } else {
                     if (typeof fbq === 'function') fbq('track', 'Lead');
@@ -501,6 +744,7 @@
                         .then(data => {
                              if (data.result === 'success') {
                                 mainContent.style.display = 'none';
+                                stickyNav.style.display = 'none';
                                 successPage.classList.remove('hidden');
                              } else {
                                 throw new Error(data.error || 'Unknown error.');
@@ -527,3 +771,6 @@
 
 </body>
 </html>
+
+
+

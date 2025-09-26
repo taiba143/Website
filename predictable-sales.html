@@ -836,7 +836,7 @@
                     sorryPage.classList.remove('hidden');
                 } else {
                     // SUCCESS LOGIC: Proceed if income is sufficient AND calculation is correct
-                    if (typeof fbq === 'function') fbq('track', 'Lead', {value: 99, currency: 'INR'});
+                    if (typeof fbq === 'function') fbq('track', 'Sales', {value: 99, currency: 'INR'});
 
                     submitButton.disabled = true;
                     submitButton.textContent = 'Submitting...';
@@ -876,3 +876,4 @@
 
 </body>
 </html>
+

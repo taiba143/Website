@@ -820,6 +820,7 @@
                 roleOtherSpecify.required = isOther;
             });
 
+            // CORRECTED FORM SUBMISSION LOGIC
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
                 const monthlyRevenue = document.getElementById('monthly_revenue').value;
@@ -836,8 +837,6 @@
                     sorryPage.classList.remove('hidden');
                 } else {
                     // SUCCESS LOGIC: Proceed if income is sufficient AND calculation is correct
-                    if (typeof fbq === 'function') fbq('track', 'Lead');
-
                     submitButton.disabled = true;
                     submitButton.textContent = 'Submitting...';
 
@@ -845,16 +844,23 @@
                         .then(response => response.json())
                         .then(data => {
                              if (data.result === 'success') {
-                                 mainContent.style.display = 'none';
-                                 stickyNav.style.display = 'none';
-                                 successPage.classList.remove('hidden');
+                                // This is a confirmed lead. Track it now.
+                                if (typeof fbq === 'function') {
+                                    fbq('track', 'Lead');
+                                }
+                                mainContent.style.display = 'none';
+                                stickyNav.style.display = 'none';
+                                successPage.classList.remove('hidden');
                              } else {
-                                 throw new Error(data.error || 'Unknown error.');
+                                throw new Error(data.error || 'Unknown error.');
                              }
                         })
                         .catch(error => {
                             console.error('Error!', error.message);
-                            // Fallback to success page even if sheet fails, to not lose the lead's booking action
+                            // Fallback to success page, still a valid lead from user's perspective. Track it.
+                            if (typeof fbq === 'function') {
+                                fbq('track', 'Lead');
+                            }
                             mainContent.style.display = 'none';
                             stickyNav.style.display = 'none';
                             successPage.classList.remove('hidden');
@@ -876,4 +882,3 @@
 
 </body>
 </html>
-
